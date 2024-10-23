@@ -15,10 +15,9 @@
 
         static void swapValues(ref int num1, ref int num2)
         {
-            int tmp;
-            tmp = num1;
-            num1 = num2;
-            num2 = tmp;
+            num1 = num1 ^ num2;
+            num2 = num2 ^ num1;
+            num1 = num1 ^ num2;
         }
     }
 }
