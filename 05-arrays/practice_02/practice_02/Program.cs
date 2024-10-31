@@ -1,4 +1,4 @@
-﻿namespace practice_02
+﻿namespace practice_01_finished
 {
     internal class Program
     {
@@ -23,7 +23,7 @@
                     }
                 }
                 Console.WriteLine("here is your array!");
-                for (int i = val - 1; i >= 0; i--)
+                for (int i = 0; i < val; i++)
                 {
                     Console.WriteLine(nums[i]);
                 }
