@@ -16,26 +16,28 @@
                 Console.WriteLine("Invalid input!");
             }
         }
-        static int digitSum(int[] ints, int ind) {
-            if (0 < ind && ind < ints.Length - 1)
+
+        static int digitSum(int[] ints, int ind)
+        {
+            if (ind >= 0 && ind < ints.Length)
             {
                 int num = ints[ind];
                 int sum = 0;
-                while (num > 10)
+
+                while (num > 0)
                 {
                     int rem = num % 10;
                     sum += rem;
-                    num = (num - rem) / 10;
+                    num /= 10; 
                 }
-                sum += num;
+
                 return sum;
             }
             else
             {
-                Console.WriteLine("out of range!");
+                Console.WriteLine("Out of range!");
                 return -1;
             }
         }
-
     }
 }
